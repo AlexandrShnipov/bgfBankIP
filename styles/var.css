@@ -1,0 +1,10 @@
+:root {
+  --text-light: #FFFFFF;
+  --text-dark: #0B4697;
+  --button-color: rgba(236, 102, 10, 1);
+  --button-border: 1px solid #C75608;
+  --button-hover: rgba(236, 102, 10, .8);
+  --button-active: rgba(236, 102, 10, 1);
+  --font-size-main: 1.125rem;
+  --font-size-card: 1.375rem;
+}
