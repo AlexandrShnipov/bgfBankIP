@@ -10,7 +10,8 @@
 
 body {
   font-family: 'Roboto Condensed', sans-serif;
-  font-weight: 400;  
+  font-weight: 400; 
+  color: var(--text-dark);
 }
 
 .container {
@@ -18,20 +19,19 @@ body {
   width: 100%;
   margin: auto;
   padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.global-container {
-  max-width: 90rem;
-  padding: 0;
-  position: relative;
-  margin: auto;
+  padding-right: 1rem;  
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   color: inherit;
   display: inline-block;
+  transition: all .5s;
+}
+
+a:hover{
+  color: var(--button-active);
 }
 
 span {
@@ -78,6 +78,21 @@ span {
 
 .benefits__icon{
   margin-bottom: 0.94rem;
+}
+
+/* go-top */
+
+.go-top__link{
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background-color: #ec660a;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: grid;
+  align-content: center;
+  place-content: center; 
 }
 
 

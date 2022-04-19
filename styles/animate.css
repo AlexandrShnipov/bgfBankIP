@@ -1,0 +1,30 @@
+.header.header--scroll {
+  position: fixed;
+  background-color: var(--text-light);  
+  color: var(--text-dark);
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+  animation: headerScroll 0.3s linear;
+}
+
+.logo--color,
+.icon-tel--dark{
+  display: none;
+}
+
+.hidden{
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+@keyframes headerScroll {
+  0% {
+    transform: translatey(-100%);
+  }
+
+  100% {
+    transform: translatey(0);
+  }
+}

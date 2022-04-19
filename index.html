@@ -16,64 +16,66 @@
 </head>
 
 <body>
-  <header class="header text--light">
-        <div class="container">
-          <div class="header__wrap">
-            <img class="logo-img" src="images/logo.png" alt="БЖФ Банк">
+  <span id="top"></span>
+  <header class="header" data--header>
+    <div class="container">
+      <div class="header__wrap">
+        <a href="#top" alt="БЖФ Банк">
+          <img class="logo-img" data--logo src="images/logo.png" alt="БЖФ Банк">
+          <img class="logo--color" data--logo-scroll src="images/logoFooter.png">
+        </a>
+        <nav class="header__menu">
+          <ul class="header__menu-list">
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#differences" data--nav-link>Отличе БЖФ</a></li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#benefits-credit" data--nav-link>Преимущества</a></li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#requirements" data--nav-link>Особые требования</a></li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#application" data--nav-link>Оформить заявку</a></li>
+          </ul>
+        </nav>
+        <a class="header__link--tel" href="tel:88005055673" type="tel">
+          <img class="icon-tel--light" src="images/icons/tel.png" alt="иконка телефона" data--icon-tel-light>
+          <img class="icon-tel--dark hidden" src="images/icons/tel-dark.png" alt="иконка телефона" data--icon-tel-dark>
 
-            <nav class="header__menu">
-              <ul class="header__menu-list">
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#">Отличе БЖФ</a></li>
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#">Преимущества</a></li>
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#">Особые требования</a></li>
-                <li class="header__menu-item">
-                  <a class="header__menu-link" href="#">Оформить заявку</a></li>
-              </ul>
-            </nav>
-            <a class="header__link--tel" href="tel:88005055673" type="tel"><img src="images/icons/tel.png"
-                alt="икотка телефона"> <span>8 800 505 56 73</span> </a>
-          </div>
-        </div>
-      </header>
-  <div class="banner-wrap">
-    <div class="global-container">      
-      <section class="banner">
-        <div class="container">
-          <div class="banner__wrap">
-            <div class="banner__content text--light">
-              <h1 class="banner__content-title">Как взять кредит самозанятому или ИП?
-                <span class="banner-text banner__content-title-slogan">
-                  Все просто — обратитесь в БЖФ Банк! Одинаковый шанс одобрения для всех клиентов, решение вынесем за 1
-                  день!
-                </span>
-              </h1>
-              <button class="button bunner--button">Получить деньги</button>
-              <span class="banner-text license">
-                Лицензия ЦБ РФ № 3138 <br> от 01 ноября 2019г.
-              </span>
-            </div>
-            <div class="banner__persona">
-              <div class="banner__persona-text">
-                <p class="banner__persona-text-name text--dark">
-                  Овчинников Дмитрий
-                </p>
-                <p class="banner__persona-text-position text--light">
-                  Вице-президент БЖФ Банка
-                </p>
-              </div>
-              <div class="banner__persona-img_wrap">
-                <img class="banner__persona-img" src="images/man.png" alt="фотография руководителя">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+          <span>8 800 505 56 73</span> </a>
+      </div>
     </div>
-  </div>
-  <div class="benefits__main text--dark">
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <div class="banner__wrap">
+        <div class="banner__content text--light">
+          <h1 class="banner__content-title">Как взять кредит самозанятому или ИП?
+            <span class="banner-text banner__content-title-slogan">
+              Все просто — обратитесь в БЖФ Банк! Одинаковый шанс одобрения для всех клиентов, решение вынесем за 1
+              день!
+            </span>
+          </h1>
+          <button class="button bunner--button">Получить деньги</button>
+          <span class="banner-text license">
+            Лицензия ЦБ РФ № 3138 <br> от 01 ноября 2019г.
+          </span>
+        </div>
+        <div class="banner__persona-inform">
+          <p class="banner__persona-text-name text--dark">
+            Овчинников Дмитрий
+          </p>
+          <p class="banner__persona-text-position text--light">
+            Вице-президент БЖФ Банка
+          </p>
+        </div>
+        <img class="banner__img--ellipse" src="images/ellipse.png" alt="элипс">
+        <img class="banner__img--man" src="images/man.png" alt="фотография руководителя">
+
+      </div>
+    </div>
+  </section>
+
+  <div class="benefits__main">
     <div class="container">
       <div class="benefits__main-wrap">
         <div class="benefits__main-item">
@@ -104,68 +106,65 @@
     </div>
   </div>
 
-
-  <section class="benefits text--dark">
-    <div class="global-container">
-      <div class="container">
-        <h2 class="section__title benefits__title">
-          С чем никогда <span>не сталкнется</span> самозанятый или ИП,
-          приходя в БЖФ банк?
-        </h2>
-        <div class="benefits__items">
-          <div class="benefits__item">
-            <img class="benefits__item-icon benefits__icon" src="images/icons/sections/printery_flyers.png" alt="icon">
-            <p class="benefits__item-text benefits__text">
-              Нужен большой пакет документов, включая налоговые декларации
-            </p>
-          </div>
-
-          <div class="benefits__item">
-            <img class="benefits__item-icon benefits__icon" src="images/icons/sections/calendar.png" alt="icon">
-            <p class="benefits__item-text benefits__text">
-              Процесс одобрения может растянуться на целый месяц
-            </p>
-          </div>
-
-          <div class="benefits__item">
-            <img class="benefits__item-icon benefits__icon" src="images/icons/sections/progress.png" alt="icon">
-            <p class="benefits__item-text benefits__text">
-              Даже с полным пакетом документов низкий процент одобрений
-            </p>
-          </div>
-          <div class="benefits__item">
-            <img class="benefits__item-icon benefits__icon" src="images/icons/sections/bankrupt.png" alt="icon">
-            <p class="benefits__item-text benefits__text">
-              Одобряют сумму, ниже запрашиваемой
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="differences text--light">
-    <div class="global-container">
-      <div class="container">
-        <div class="differences__content">
-          <h2 class="section__title differences__title">
-            В чем отличие кредитов в БЖФ Банке?
-          </h2>
-          <p class="differences__text">
-            Мы выдаем кредиты под залог квартир, аппартаментов и коммерческой недвижимости с низким ежемесячным платежом
-            и
-            простой схемой одобрения
+  <section class="benefits" id="benefits">
+    <div class="container">
+      <h2 class="section__title benefits__title">
+        С чем никогда <span>не сталкнется</span> самозанятый или ИП,
+        приходя в БЖФ банк?
+      </h2>
+      <div class="benefits__items">
+        <div class="benefits__item">
+          <img class="benefits__item-icon benefits__icon" src="images/icons/sections/printery_flyers.png" alt="icon">
+          <p class="benefits__item-text benefits__text">
+            Нужен большой пакет документов, включая налоговые декларации
           </p>
-          <button class="button differences-bunner">Получить деньги</button>
-          <span class="differences-license license ">
-            Лицензия ЦБ РФ № 3138 <br> от 01 ноября 2019г.
-          </span>
+        </div>
+
+        <div class="benefits__item">
+          <img class="benefits__item-icon benefits__icon" src="images/icons/sections/calendar.png" alt="icon">
+          <p class="benefits__item-text benefits__text">
+            Процесс одобрения может растянуться на целый месяц
+          </p>
+        </div>
+
+        <div class="benefits__item">
+          <img class="benefits__item-icon benefits__icon" src="images/icons/sections/progress.png" alt="icon">
+          <p class="benefits__item-text benefits__text">
+            Даже с полным пакетом документов низкий процент одобрений
+          </p>
+        </div>
+        <div class="benefits__item">
+          <img class="benefits__item-icon benefits__icon" src="images/icons/sections/bankrupt.png" alt="icon">
+          <p class="benefits__item-text benefits__text">
+            Одобряют сумму, ниже запрашиваемой
+          </p>
         </div>
       </div>
     </div>
+
   </section>
 
-  <section class="benefits-credit text--dark">
+  <section class="differences text--light" id="differences">
+    <div class="container">
+      <div class="differences__content">
+        <h2 class="section__title differences__title">
+          В чем отличие кредитов в БЖФ Банке?
+        </h2>
+        <p class="differences__text">
+          Мы выдаем кредиты под залог квартир, аппартаментов и коммерческой недвижимости с низким ежемесячным платежом
+          и
+          простой схемой одобрения
+        </p>
+        <button class="button differences-bunner">Получить деньги</button>
+        <span class="differences-license license ">
+          Лицензия ЦБ РФ № 3138 <br> от 01 ноября 2019г.
+        </span>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="benefits-credit" id="benefits-credit">
     <div class="container">
       <h2 class="section__title benefits-credit__title">
         Преимущества кредита под залог недвижимости
@@ -228,14 +227,12 @@
     </div>
   </section>
 
-  <section class="requirements text--dark">
+  <section class="requirements" id="requirements">
     <div class="container">
       <h2 class="section__title requirements__title">
         особые требования
       </h2>
-
       <div class="requirements__items">
-
         <div class="requirements__item">
           <h3 class="requirements__item-title">
             Требования к заемщику
@@ -280,12 +277,14 @@
     </div>
   </section>
 
-  <section class="application text--light">
-    <div class="global-container">
-      <div class="container">
+  <section class="application text--light" id="application">
+    <div class="container">
+      <div class="application__wrap">
         <div class="applications__img-wrap">
-          <img class="applications__img" src="images/airplane.png" alt="картинка аэроплана">
+          <img class="applications__img application__img--ellipse" src="images/ellipse.png" alt="элипс">
+          <img class="applications__img application__img--bg" src="images/airplane.png" alt="картинка аэроплана">
         </div>
+
         <div class="application__content">
           <h2 class="section__title application__title">Оставьте заявку и получите точное решение по кредиту
             в течение 1 дня</h2>
@@ -309,9 +308,10 @@
               <option value="Гомель">Гомель</option>
             </select>
 
-            <label class="form__item-agreement"><input type="checkbox" name="Agreement"><span>Я согласен <a href="">&nbsp;с
-                условиями обработки
-                персональных данных</a> </span> </label>
+            <label class="form__item-agreement"><input type="checkbox" name="Agreement"><span>Я согласен <a
+                  href="">&nbsp;с
+                  условиями обработки
+                  персональных данных</a> </span> </label>
             <button class="button form__button" type="submit">Отправить заявку</button>
           </form>
 
@@ -332,11 +332,9 @@
               страхование и применение аккредитивной формы расчетов в Тарифах Банка
             </p>
           </div>
-
         </div>
       </div>
     </div>
-
   </section>
 
   <footer class="footer">
@@ -344,14 +342,16 @@
       <div class="container">
         <div class="footer-wrap">
           <div class="footer--left">
-            <img class="footer__logo" src="images/logoFooter.png" alt="БЖД Банк">
+            <a class="footer__logo" href="#top">
+              <img src="images/logoFooter.png" alt="БЖД Банк">
+            </a>
             <a class="footer--left-text footer__agreement-link ">Соглашение на обработку персональных данных</a>
             <span class="footer--left-text copyright ">© 2001—2021 АО «Банк БЖФ». Универсальная лицензия АО «Банк БЖФ»
               №3138 от 01 ноября
               2019г.</span>
           </div>
           <div class="footer__contacts">
-            <h2 class="footer__contacts-title section__title text--dark">Контакты банка</h2>
+            <h2 class="footer__contacts-title section__title">Контакты банка</h2>
             <div class="footer__contacts-content">
               <div class="footer__contacts-emails">
                 <div class="footer__contacts-email-block">
@@ -384,8 +384,13 @@
             </div>
           </div>
         </div>
-
       </div>
+    </div>
+    <!-- go-top -->
+    <div class="go-top" >
+      <a class="go-top__link" href="#top" data--go-top>
+        <img src="/images/icons/go-top.svg" alt="arrowTop">
+      </a>
     </div>
 
   </footer>
