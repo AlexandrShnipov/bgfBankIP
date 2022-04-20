@@ -75,3 +75,33 @@ for (let anchor of anchors) {
   })
 }
 
+// modal
+const noScroll = document.querySelector('body');
+const buttonActivation = document.querySelectorAll('[data--button-modal-activation]');
+console.log(buttonActivation);
+const modalWrap = document.querySelector('[data--modal-wrap]');
+const modal = document.querySelector('[data--modal]');
+const buttonClose = document.querySelector('[data--button-modal-close]');
+
+const modalClose = () => {  
+  modalWrap.classList.add('hidden');
+  noScroll.classList.remove('no-scroll');
+  console.log('click')
+}
+
+const modalActivation = () => {
+  modalWrap.classList.add('active');
+  modalWrap.classList.remove('hidden');
+  noScroll.classList.add('no-scroll');
+}
+
+buttonClose.addEventListener('click', modalClose);
+modalWrap.addEventListener('click',modalClose);
+
+modal.addEventListener('click', (e) => {
+  e.stopPropagation();
+})
+
+for (let i = 0; i < buttonActivation.length; i++) {
+  buttonActivation[i].addEventListener('click', modalActivation);
+}

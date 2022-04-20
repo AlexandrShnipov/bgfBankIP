@@ -1,0 +1,101 @@
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  place-content: center;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.no-scroll {
+  overflow-y: hidden; 
+}
+
+.modal-wrap.active {
+  display: grid;
+}
+
+.modal-wrap.hidden {
+  display: none;
+}
+
+.modal-wrap::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(85, 85, 85, 0.5);
+}
+
+.modal {
+  max-width: 34rem;
+  width: 100%;
+  background-color: var(--text-light);
+  padding: 6.25rem 3.125rem;
+  z-index: 11;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.modal__button--close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: none;
+}
+
+
+.modal__button--close>span::before,
+.modal__button--close>span::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: calc(50% - 1px);
+  width: 70%;
+  height: 2px;
+  margin-left: -10px;
+  background: var(--text-dark);
+}
+
+.modal__button--close>span::before {
+  transform: rotate(-45deg);
+}
+
+.modal__button--close>span::after {
+  transform: rotate(45deg);
+}
+
+.modal__title {
+  margin-bottom: 2rem;
+  padding-top: 0;
+  text-align: center;
+}
+
+.modal__form>.form__item {
+  color: var(--text-dark);
+  outline: 1px solid var(--text-dark);
+}
+
+.modal__form>.form__item:focus {
+  outline: 2px solid var(--text-dark);
+}
+
+
+.modal__form>.form__item::placeholder {
+  color: var(--text-dark);
+}
+
+.modal__form>.form__button {
+  margin-bottom: 0;
+  align-self: auto;
+}

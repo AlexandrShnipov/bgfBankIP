@@ -75,7 +75,8 @@ try {
 
   for (var _iterator = anchors[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
     _loop();
-  }
+  } // modal
+
 } catch (err) {
   _didIteratorError = true;
   _iteratorError = err;
@@ -89,4 +90,33 @@ try {
       throw _iteratorError;
     }
   }
+}
+
+var noScroll = document.querySelector('body');
+var buttonActivation = document.querySelectorAll('[data--button-modal-activation]');
+console.log(buttonActivation);
+var modalWrap = document.querySelector('[data--modal-wrap]');
+var modal = document.querySelector('[data--modal]');
+var buttonClose = document.querySelector('[data--button-modal-close]');
+
+var modalClose = function modalClose() {
+  modalWrap.classList.add('hidden');
+  noScroll.classList.remove('no-scroll');
+  console.log('click');
+};
+
+var modalActivation = function modalActivation() {
+  modalWrap.classList.add('active');
+  modalWrap.classList.remove('hidden');
+  noScroll.classList.add('no-scroll');
+};
+
+buttonClose.addEventListener('click', modalClose);
+modalWrap.addEventListener('click', modalClose);
+modal.addEventListener('click', function (e) {
+  e.stopPropagation();
+});
+
+for (var i = 0; i < buttonActivation.length; i++) {
+  buttonActivation[i].addEventListener('click', modalActivation);
 }

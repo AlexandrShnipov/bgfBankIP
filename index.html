@@ -16,6 +16,40 @@
 </head>
 
 <body>
+  <div class="modal-wrap" data--modal-wrap>
+    <div class="modal data" data--modal>
+      <button class="modal__button--close" data--button-modal-close>
+        <span></span>       
+      </button>
+      <h3 class="modal__title section__title">Оставьте заявку и получите точное решение по кредиту в течение 1 дня</h3>
+      <form class="application__form  modal__form" action="#">
+
+        <!-- Hidden Required Fields -->
+        <input type="hidden" name="project_name" value="Банк БЖФ>">
+        <input type="hidden" name="admin_email" value="your@mail.ru">
+        <input type="hidden" name="form_subject" value="Form Subject">
+        <!-- <select type="hidden" name="form_select" value="Form Select"></select> -->
+        <!-- END Hidden Required Fields -->
+
+        <input class="form__item" name="ФИО" type="text" placeholder="Ваше ФИО" required>
+        <input class="form__item" name="Телефон" type="text" placeholder="Номер телефона" required>
+        <!-- <input class="form__item" name="В каком городе у вас недвижимость?" type="text" placeholder="В каком городе у вас недвижимость?" required> -->
+
+        <select class="form__item" name="В каком городе у вас недвижимость?" id="">
+          <option value="В каком городе у вас недвижимость?">В каком городе у вас недвижимость?</option>
+          <option value="Витебск">Витебск</option>
+          <option value="Гомель">Гомель</option>
+        </select>
+
+        <label class="form__item-agreement"><input type="checkbox" name="Согласен с обработкой персональных данных?"><span>Я согласен <a
+              href="">&nbsp;с
+              условиями обработки
+              персональных данных</a> </span> </label>
+        <button class="button form__button" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
   <span id="top"></span>
   <header class="header" data--header>
     <div class="container">
@@ -27,7 +61,7 @@
         <nav class="header__menu">
           <ul class="header__menu-list">
             <li class="header__menu-item">
-              <a class="header__menu-link" href="#differences" data--nav-link>Отличе БЖФ</a></li>
+              <a class="header__menu-link" href="#differences" data--nav-link>Отличие БЖФ</a></li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="#benefits-credit" data--nav-link>Преимущества</a></li>
             <li class="header__menu-item">
@@ -55,7 +89,7 @@
               день!
             </span>
           </h1>
-          <button class="button bunner--button">Получить деньги</button>
+          <button class="button bunner--button" data--button-modal-activation>Получить деньги</button>
           <span class="banner-text license">
             Лицензия ЦБ РФ № 3138 <br> от 01 ноября 2019г.
           </span>
@@ -155,7 +189,7 @@
           и
           простой схемой одобрения
         </p>
-        <button class="button differences-bunner">Получить деньги</button>
+        <button class="button differences-bunner" data--button-modal-activation>Получить деньги</button>
         <span class="differences-license license ">
           Лицензия ЦБ РФ № 3138 <br> от 01 ноября 2019г.
         </span>
@@ -220,7 +254,7 @@
           </p>
         </div>
       </div>
-      <button class="button button--submit bunner--button">Получить деньги</button>
+      <button class="button button--submit bunner--button" data--button-modal-activation>Получить деньги</button>
       <span class="benefits-credit__text license">
         Лицензия ЦБ РФ № 3138 <br> от 01 ноября 2019г.
       </span>

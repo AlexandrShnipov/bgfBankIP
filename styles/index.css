@@ -2,6 +2,7 @@
 @import "button.css";
 @import "common.css";
 @import "animate.css";
+@import "modal.css";
 
 
 .header {
@@ -277,7 +278,7 @@
 .application__wrap {
   position: relative;
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 1fr 40%;
   column-gap: 2.5rem;
 }
 
