@@ -1,7 +1,45 @@
 "use strict";
 
+// modal
+const noScroll = document.querySelector('body');
+const buttonActivation = document.querySelectorAll('[data--button-modal-activation]');
+console.log(buttonActivation);
+const modalWrap = document.querySelector('[data--modal-wrap]');
+const modal = document.querySelector('[data--modal]');
+const modalContent = document.querySelector('[data--modal-content]');
+const modalContentThanks = document.querySelector('[data--modal-content-thanks]');
+const buttonClose = document.querySelector('[data--button-modal-close]');
+const buttonModalThanks = document.querySelector('[data--button-modal-thanks]');
+const $modalContent = document.querySelector('[data--modal-content]');
+const $modalContentThanks = document.querySelector('[data--modal-content-thanks]');
 
-// form
+const modalActivation = () => {
+  modalWrap.classList.add('open');
+  noScroll.classList.add('no-scroll');
+}
+
+const modalClose = () => {
+  modalWrap.classList.remove('open');
+  noScroll.classList.remove('no-scroll');
+  $modalContentThanks.classList.remove('open');
+  $modalContent.classList.remove('none');
+  console.log('click')
+}
+
+for (let i = 0; i < buttonActivation.length; i++) {
+  buttonActivation[i].addEventListener('click', modalActivation);
+}
+
+buttonClose.addEventListener('click', modalClose);
+modalWrap.addEventListener('click', modalClose);
+buttonModalThanks.addEventListener('click', modalClose);
+
+modal.addEventListener('click', (e) => {
+  e.stopPropagation();
+})
+
+//! form
+console.log($modalContent, $modalContentThanks);
 $(document).ready(function () {
   //E-mail Ajax Send
   $("form").submit(function () {
@@ -13,7 +51,9 @@ $(document).ready(function () {
       //Change
       data: th.serialize()
     }).done(function () {
-      alert("Thank you!");
+      // alert("Thank you!");
+      $modalContentThanks.classList.add('open');
+      $modalContent.classList.add('none');
       setTimeout(function () {
         // Done Functions
         th.trigger("reset");
@@ -52,14 +92,14 @@ window.addEventListener('scroll', function () {
     iconTelDark.classList.remove('active');
   }
 
-  for (let i = 0; i < navLink.length; i++){
-        if (document.documentElement.scrollTop >= 500){
-          navLink[i].classList.add('text--dark');
-        }
-        else{
-          navLink[i].classList.remove('text--dark');
-        }
-      }
+  for (let i = 0; i < navLink.length; i++) {
+    if (document.documentElement.scrollTop >= 500) {
+      navLink[i].classList.add('text--dark');
+    }
+    else {
+      navLink[i].classList.remove('text--dark');
+    }
+  }
 })
 
 let anchors = document.querySelectorAll('a[href*="#"]')
@@ -75,33 +115,3 @@ for (let anchor of anchors) {
   })
 }
 
-// modal
-const noScroll = document.querySelector('body');
-const buttonActivation = document.querySelectorAll('[data--button-modal-activation]');
-console.log(buttonActivation);
-const modalWrap = document.querySelector('[data--modal-wrap]');
-const modal = document.querySelector('[data--modal]');
-const buttonClose = document.querySelector('[data--button-modal-close]');
-
-const modalClose = () => {  
-  modalWrap.classList.add('hidden');
-  noScroll.classList.remove('no-scroll');
-  console.log('click')
-}
-
-const modalActivation = () => {
-  modalWrap.classList.add('active');
-  modalWrap.classList.remove('hidden');
-  noScroll.classList.add('no-scroll');
-}
-
-buttonClose.addEventListener('click', modalClose);
-modalWrap.addEventListener('click',modalClose);
-
-modal.addEventListener('click', (e) => {
-  e.stopPropagation();
-})
-
-for (let i = 0; i < buttonActivation.length; i++) {
-  buttonActivation[i].addEventListener('click', modalActivation);
-}

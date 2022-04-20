@@ -17,37 +17,50 @@
 
 <body>
   <div class="modal-wrap" data--modal-wrap>
-    <div class="modal data" data--modal>
+    <div class="modal" data--modal>
       <button class="modal__button--close" data--button-modal-close>
-        <span></span>       
+        <span></span>
       </button>
-      <h3 class="modal__title section__title">Оставьте заявку и получите точное решение по кредиту в течение 1 дня</h3>
-      <form class="application__form  modal__form" action="#">
+      <div class="modal__content" data--modal-content>
+        <h3 class="modal__content-title section__title">Оставьте заявку и получите точное решение по кредиту в течение 1
+          дня
+        </h3>
+        <form class="application__form  modal__form" action="#">
 
-        <!-- Hidden Required Fields -->
-        <input type="hidden" name="project_name" value="Банк БЖФ>">
-        <input type="hidden" name="admin_email" value="your@mail.ru">
-        <input type="hidden" name="form_subject" value="Form Subject">
-        <!-- <select type="hidden" name="form_select" value="Form Select"></select> -->
-        <!-- END Hidden Required Fields -->
+          <!-- Hidden Required Fields -->
+          <input type="hidden" name="project_name" value="Банк БЖФ>">
+          <input type="hidden" name="admin_email" value="your@mail.ru">
+          <input type="hidden" name="form_subject" value="Form Subject">
+          <!-- <select type="hidden" name="form_select" value="Form Select"></select> -->
+          <!-- END Hidden Required Fields -->
 
-        <input class="form__item" name="ФИО" type="text" placeholder="Ваше ФИО" required>
-        <input class="form__item" name="Телефон" type="text" placeholder="Номер телефона" required>
-        <!-- <input class="form__item" name="В каком городе у вас недвижимость?" type="text" placeholder="В каком городе у вас недвижимость?" required> -->
+          <input class="form__item" name="ФИО" type="text" placeholder="Ваше ФИО" required>
+          <input class="form__item" name="Телефон" type="text" placeholder="Номер телефона" required>
+          <!-- <input class="form__item" name="В каком городе у вас недвижимость?" type="text" placeholder="В каком городе у вас недвижимость?" required> -->
 
-        <select class="form__item" name="В каком городе у вас недвижимость?" id="">
-          <option value="В каком городе у вас недвижимость?">В каком городе у вас недвижимость?</option>
-          <option value="Витебск">Витебск</option>
-          <option value="Гомель">Гомель</option>
-        </select>
+          <select class="form__item" name="В каком городе у вас недвижимость?" id="">
+            <option value="В каком городе у вас недвижимость?">В каком городе у вас недвижимость?</option>
+            <option value="Витебск">Витебск</option>
+            <option value="Гомель">Гомель</option>
+          </select>
 
-        <label class="form__item-agreement"><input type="checkbox" name="Согласен с обработкой персональных данных?"><span>Я согласен <a
-              href="">&nbsp;с
-              условиями обработки
-              персональных данных</a> </span> </label>
-        <button class="button form__button" type="submit">Отправить заявку</button>
-      </form>
+          <label class="form__item-agreement"><input type="checkbox"
+              name="Согласен с обработкой персональных данных?"><span>Я согласен <a href="">&nbsp;с
+                условиями обработки
+                персональных данных</a> </span> </label>
+          <button class="button form__button" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+
+      <div class="modal__content--thanks" data--modal-content-thanks>
+        <h2 class="modal__content-title section__title">Спасибо</h2>
+        <p>
+          Данные успешно отправлены. Ожидайте рассмотрения заявки, по результату вам перезвонит менеджер из банка.
+        </p>
+        <button class="button form__button" type="button" data--button-modal-thanks>Закрыть</button>
+      </div>
     </div>
+
   </div>
 
   <span id="top"></span>
@@ -421,7 +434,7 @@
       </div>
     </div>
     <!-- go-top -->
-    <div class="go-top" >
+    <div class="go-top">
       <a class="go-top__link" href="#top" data--go-top>
         <img src="/images/icons/go-top.svg" alt="arrowTop">
       </a>
