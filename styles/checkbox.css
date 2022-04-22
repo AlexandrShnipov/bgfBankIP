@@ -1,0 +1,18 @@
+.check-box {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+}
+
+.check-style {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--button-color);
+  margin-right: 0.5rem;
+}
+
+.check-box:checked+.check-style {
+  background: url(../images/check.svg);
+}
