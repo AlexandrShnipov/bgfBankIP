@@ -115,3 +115,48 @@ for (let anchor of anchors) {
   })
 }
 
+// ! range
+const rangeOne = document.querySelector('[data--range-one]');
+const rangeTwo = document.querySelector('[data--range-two]');
+let rangeOneValue = rangeOne.value;
+let rangeTwoValue = rangeTwo.value;
+const rangeLabelOne = document.querySelector('[data--range-label-one]');
+const rangeLabelTwo = document.querySelector('[data--range-label-two]');
+const resultFinish = document.querySelector('[data--calculator-result]');
+
+
+rangeOne.addEventListener("input", e => {
+  const valueOne = e.target.value;
+  rangeOneValue = e.target.value;
+  rangeLabelOne.innerHTML = (valueOne+ "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+  const result = countResult(valueOne, rangeTwoValue);
+  resultFinish.innerHTML =  result;
+});
+
+rangeTwo.addEventListener("input", e => {
+  const valueTwo = e.target.value;
+  rangeTwoValue = e.target.value;
+  rangeLabelTwo.innerHTML = valueTwo;
+  const result = countResult(rangeOneValue, valueTwo);
+  resultFinish.innerHTML =  result;
+});
+
+
+const countResult = (a, b) => {
+  return ((Number(a) / Number(b)).toFixed(2)).replace(/\B(?=(\d{3})+(?!\d))/g, " "); // округляет до двух знаков и ставит пробелы между тысячами
+
+// округление до двух знаков
+  //return  (Math.round((Number(a) / Number(b)) * 100)) / 100;
+
+  //округление до двух знаков и ставит пробелы между числами
+  // let finish = Number(a) / Number(b);
+  // return (finish.toFixed(2) + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+  
+}
+
+
+
+
+
+
+

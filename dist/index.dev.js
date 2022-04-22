@@ -114,7 +114,8 @@ try {
 
   for (var _iterator = anchors[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
     _loop();
-  }
+  } // ! range
+
 } catch (err) {
   _didIteratorError = true;
   _iteratorError = err;
@@ -129,3 +130,34 @@ try {
     }
   }
 }
+
+var rangeOne = document.querySelector('[data--range-one]');
+var rangeTwo = document.querySelector('[data--range-two]');
+var rangeOneValue = rangeOne.value;
+var rangeTwoValue = rangeTwo.value;
+var rangeLabelOne = document.querySelector('[data--range-label-one]');
+var rangeLabelTwo = document.querySelector('[data--range-label-two]');
+var resultFinish = document.querySelector('[data--calculator-result]');
+rangeOne.addEventListener("input", function (e) {
+  var valueOne = e.target.value;
+  rangeOneValue = e.target.value;
+  rangeLabelOne.innerHTML = (valueOne + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+  var result = countResult(valueOne, rangeTwoValue);
+  resultFinish.innerHTML = result;
+});
+rangeTwo.addEventListener("input", function (e) {
+  var valueTwo = e.target.value;
+  rangeTwoValue = e.target.value;
+  rangeLabelTwo.innerHTML = valueTwo;
+  var result = countResult(rangeOneValue, valueTwo);
+  resultFinish.innerHTML = result;
+});
+
+var countResult = function countResult(a, b) {
+  return (Number(a) / Number(b)).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, " "); // округляет до двух знаков и ставит пробелы между тысячами
+  // округление до двух знаков
+  //return  (Math.round((Number(a) / Number(b)) * 100)) / 100;
+  //округление до двух знаков и ставит пробелы между числами
+  // let finish = Number(a) / Number(b);
+  // return (finish.toFixed(2) + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+};

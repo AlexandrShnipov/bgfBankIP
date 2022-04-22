@@ -190,7 +190,48 @@
         </div>
       </div>
     </div>
+  </section>
 
+  <section class="calculator">
+    <div class="container">
+      <h2 class="calculator__title section__title ">
+        Калькулятор ежемесячного платежа
+      </h2>
+      <div class="calculator__items">
+        <div class="calculator__item">
+          <h4 class="calculator__item-title">
+            Выберите сумму кредита
+          </h4>
+          <label for="range" data--range-label-one> 1 000 000 </label>
+            <input class="calculator__item-range" id="range" type="range" min="500000" max="30000000" step="1000000" value="1000000" data--range-one>
+         
+          <div class="calculator__item-range-text">
+            <span class="calculator__item-range--min"> от 1 000 000₽</span>
+            <span class="calculator__item-range--vax"> от 30 000 000₽</span>
+          </div>
+        </div>
+
+        <div class="calculator__item">
+          <h4 class="calculator__item-title">
+            Выберите срок кредитования
+          </h4>
+          <label for="range" data--range-label-two> 2 </label>
+            <input class="calculator__item-range"  id="range" type="range" min="1" max="25" step="1" value="2" data--range-two>
+         
+          <div class="calculator__item-range-text">
+            <span class="calculator__item-range--min"> 1 год</span>
+            <span class="calculator__item-range--vax"> 25 лет</span>
+          </div>
+        </div>
+
+        <div class="calculator__item calculator__item--result">
+          <h4 class="calculator__item-title">
+            Предварительный расчет
+          </h4>
+          <span>от</span><span data--calculator-result>500 000</span><span>₽</span>
+        </div>      
+      </div>
+    </div>
   </section>
 
   <section class="differences text--light" id="differences">

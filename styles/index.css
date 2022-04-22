@@ -3,7 +3,7 @@
 @import "common.css";
 @import "animate.css";
 @import "modal.css";
-@import "checkbox.css"; 
+@import "checkbox.css";
 
 
 .header {
@@ -13,7 +13,7 @@
   width: 100%;
   height: 5rem;
   z-index: 10;
-  color: var(--text-light); 
+  color: var(--text-light);
 }
 
 /* header */
@@ -34,13 +34,13 @@
   padding-top: calc(1.75rem - .6rem);
 }
 
-.header__menu-item{
+.header__menu-item {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
 
 .header__menu-link {
-  padding: .25rem; 
+  padding: .25rem;
 }
 
 .header__menu-link {
@@ -50,13 +50,14 @@
 .header__link--tel {
   font-size: 1.25rem;
   line-height: 1.23;
-  font-weight: 500; 
+  font-weight: 500;
   padding-top: calc(1.75rem - .6rem);
   display: flex;
   align-items: center;
   gap: 1.5rem;
   /* position: relative; */
 }
+
 /* 
 .header__link--tel>img {
   width: auto;
@@ -195,6 +196,68 @@
 
 /* items in common.css */
 
+/* calculator */
+.calculator {
+  background: linear-gradient(270deg, rgba(19, 165, 56, 0.1) 0%, rgba(11, 70, 151, 0.1) 100%), #FFFFFF;
+  padding-bottom: 6.25rem;
+}
+
+.calculator__title {
+  max-width: 100%;
+}
+
+.calculator__items {
+  display: flex;
+  gap: 2.375rem;
+}
+
+.calculator__item {
+  max-width: 22.625rem;
+  width: 100%;
+}
+
+.calculator__item label {
+  display: inline-block;
+  padding: 0.8rem;
+  background: rgba(236, 102, 10, 0.1);
+  border: 1px solid #EC660A;
+  width: 100%;
+}
+
+.calculator__item-range {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.calculator__item-range-text {
+  display: flex;
+  justify-content: space-between;
+  font-size: .812rem;
+}
+
+.calculator__item span {
+  display: inline-block;
+}
+
+.calculator__item--result>span {
+  font-size: 2.81rem;
+}
+
+.calculator__item--result>span:nth-of-type(1) {
+  margin-right: 0.5rem;
+}
+
+.calculator__item--result>span:nth-of-type(3) {
+  margin-left: 0.5rem;
+}
+
+.calculator__item-title {
+  margin-bottom: 1rem;
+}
+
+
+
 /* differences */
 .differences {
   background: url(/images/maskGroup.png) right bottom no-repeat, linear-gradient(270deg, #13A538 0%, #0B4697 100%), #FFFFFF;
@@ -291,12 +354,12 @@
   position: absolute;
 }
 
-.application__img--ellipse{
-right: 0rem;
-bottom: -27rem;
+.application__img--ellipse {
+  right: 0rem;
+  bottom: -27rem;
 }
 
-.application__img--bg{
+.application__img--bg {
   right: 0;
   bottom: 0;
 }
