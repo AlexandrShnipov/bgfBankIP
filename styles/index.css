@@ -216,6 +216,10 @@
   width: 100%;
 }
 
+.calculator__item-title{
+  font-weight: 400;
+}
+
 .calculator__item label {
   display: inline-block;
   padding: 0.8rem;

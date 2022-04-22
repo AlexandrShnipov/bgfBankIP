@@ -114,7 +114,7 @@ try {
 
   for (var _iterator = anchors[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
     _loop();
-  } // ! range
+  } // ! calculator
 
 } catch (err) {
   _didIteratorError = true;
@@ -141,7 +141,7 @@ var resultFinish = document.querySelector('[data--calculator-result]');
 rangeOne.addEventListener("input", function (e) {
   var valueOne = e.target.value;
   rangeOneValue = e.target.value;
-  rangeLabelOne.innerHTML = (valueOne + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+  rangeLabelOne.innerHTML = valueOne.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   var result = countResult(valueOne, rangeTwoValue);
   resultFinish.innerHTML = result;
 });

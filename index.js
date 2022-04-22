@@ -115,7 +115,7 @@ for (let anchor of anchors) {
   })
 }
 
-// ! range
+// ! calculator
 const rangeOne = document.querySelector('[data--range-one]');
 const rangeTwo = document.querySelector('[data--range-two]');
 let rangeOneValue = rangeOne.value;
@@ -128,7 +128,7 @@ const resultFinish = document.querySelector('[data--calculator-result]');
 rangeOne.addEventListener("input", e => {
   const valueOne = e.target.value;
   rangeOneValue = e.target.value;
-  rangeLabelOne.innerHTML = (valueOne+ "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+  rangeLabelOne.innerHTML = valueOne.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   const result = countResult(valueOne, rangeTwoValue);
   resultFinish.innerHTML =  result;
 });
