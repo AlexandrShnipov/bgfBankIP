@@ -78,11 +78,13 @@
 
 .modal__form>.form__item {
   color: var(--text-dark);
-  outline: 1px solid var(--text-dark);
+  /* outline: 1px solid var(--text-dark); */
+  box-shadow: inset 0px 0px 1px 1px;
 }
 
 .modal__form>.form__item:focus {
-  outline: 2px solid var(--text-dark);
+  outline: none;
+  box-shadow: inset 0px 0px 2px 2px;
 }
 
 

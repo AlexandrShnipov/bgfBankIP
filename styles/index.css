@@ -387,7 +387,7 @@
   background: transparent;
   border: none;
   color: var(--text-light);
-  outline: 1px solid var(--text-light);
+  box-shadow: inset 0px 0px 1px 1px;
 }
 
 select.form__item>option {
@@ -396,11 +396,8 @@ select.form__item>option {
 }
 
 .form__item:focus {
-  outline: 2px solid var(--text-light);
-}
-
-.form__item:active {
-  background: transparent;
+  outline: none;
+  box-shadow: inset 0px 0px 2px 2px;
 }
 
 .form__item::placeholder {
