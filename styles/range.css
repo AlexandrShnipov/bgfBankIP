@@ -1,0 +1,38 @@
+input[type=range]  { 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  border-radius: 1rem;
+  height: .5rem;
+  border: var(--button-border);
+  background-color: rgba(236, 102, 10, 0.1);
+}
+input[type=range]::-webkit-slider-thumb {
+  background-color: var(--button-color);
+  border: 1px solid  var(--button-color);
+  border-radius: 50%;
+  cursor: pointer;
+  width:1.2rem;
+  height: 1.2rem;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+
+input[type=range]::-moz-range-track {
+  border-radius: 1rem;
+  height: .5rem;
+  border: var(--button-border);
+  background-color: rgba(236, 102, 10, 0.1);
+}
+input[type=range]::-moz-range-thumb {
+  background-color: var(--button-color);
+  border: 1px solid  var(--button-color);
+  border-radius: 50%;
+  cursor: pointer;
+  width:1.2rem;
+  height: 1.2rem;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
