@@ -5,6 +5,7 @@
 @import "modal.css";
 @import "checkbox.css";
 @import "range.css";
+@import "media.css";
 
 
 .header {
@@ -101,7 +102,7 @@
   margin-bottom: 9.3rem;
 }
 
-.bunner--button {
+.banner--button {
   margin-bottom: 1.875rem;
 }
 
@@ -539,3 +540,5 @@ select.form__item>option {
 .footer__contacts-socials-item+.footer__contacts-socials-item {
   margin-left: 1rem;
 }
+
+

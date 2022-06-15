@@ -1,0 +1,87 @@
+@media (max-width: 1050px) {
+  .banner__img--ellipse {
+    right: -14rem;
+    bottom: -29rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .header__menu-list {
+    font-size: 1rem;
+  }
+
+  .banner__content-title {
+    padding-top: 2rem;
+  }
+
+  .banner__img--ellipse {
+    right: -27rem;
+    bottom: -45rem;
+  }
+
+  .banner__img--man {
+    position: absolute;
+    right: -7rem;
+    bottom: -13rem;
+  }
+
+  .banner__persona-inform {
+    right: 26rem;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .banner__img--ellipse {
+    right: -44rem;
+    bottom: -49rem;
+    width: 120%;
+
+  }
+
+  .banner__img--man {
+    bottom: -5rem;
+    width: 60%;
+  }
+
+  .banner__persona-inform {
+    right: 27rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner__img--ellipse {
+    right: -29rem;
+    bottom: -46rem;
+    width: 120%;
+  }
+
+  .banner__persona-inform {
+    right: 30rem;
+    bottom: -34rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .banner__img--ellipse {
+    right: -28rem;
+    bottom: -26rem;
+  }
+
+  .banner__img--man {
+    bottom: -2rem;
+    right: -4rem;
+    width: 65%;
+  }
+
+  .banner__persona-inform {
+    right: 20rem;
+    bottom: -36rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner__persona-inform {
+    right: 17rem;
+  }
+}

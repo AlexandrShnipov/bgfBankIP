@@ -22,18 +22,26 @@
   height: 100%;
 }
 
-.form__button{
+.form__button {
   padding: .875rem 2.19rem .875rem 2.19rem;
 }
 
-.button.form__button::before{
+.button.form__button::before {
   display: none;
 }
 
-.button:hover{
+.button:hover {
   background-color: var(--button-hover);
 }
 
-.button:active{
+.button:active {
   background-color: var(--button-active);
+}
+
+
+@media (max-width: 992px) {
+  .button::before {
+    right: 0.5rem;
+    width: 2rem;
+  }
 }
