@@ -112,4 +112,10 @@ span {
   }
 }
 
+@media (max-width: 280px){
+  :root{
+    font-size: .65rem;
+  }
+}
+
 

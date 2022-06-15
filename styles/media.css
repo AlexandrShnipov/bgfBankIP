@@ -15,24 +15,6 @@
   }
 
   .banner__img--ellipse {
-    right: -27rem;
-    bottom: -45rem;
-  }
-
-  .banner__img--man {
-    position: absolute;
-    right: -7rem;
-    bottom: -13rem;
-  }
-
-  .banner__persona-inform {
-    right: 26rem;
-  }
-}
-
-
-@media (max-width: 992px) {
-  .banner__img--ellipse {
     right: -44rem;
     bottom: -49rem;
     width: 120%;
@@ -60,6 +42,23 @@
     right: 30rem;
     bottom: -34rem;
   }
+
+  .benefits__main-wrap {
+    margin-top: -1.7rem;
+  }
+
+  .benefits__main-item+.benefits__main-item {
+    margin-left: .5rem;
+  }
+
+  .benefits__main-item-number {
+    font-size: 2rem;
+  }
+
+  .benefits__main-item {
+    padding: 1rem;
+    max-width: 15rem;
+  }
 }
 
 @media (max-width: 576px) {
@@ -76,12 +75,39 @@
 
   .banner__persona-inform {
     right: 20rem;
+    bottom: -32rem;
+  }
+
+  .benefits__main-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: .5rem;
+  }
+
+  .benefits__main-item+.benefits__main-item {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 509px) {
+  .banner__persona-inform {
     bottom: -36rem;
   }
 }
 
+
 @media (max-width: 480px) {
   .banner__persona-inform {
     right: 17rem;
+  }
+}
+
+@media (max-width: 394px) {
+  .benefits__main-wrap {    
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .benefits__main-item:last-child{
+    display: none;
   }
 }
