@@ -25,7 +25,6 @@
     right: -44rem;
     bottom: -49rem;
     width: 120%;
-
   }
 
   .banner__img--man {
@@ -37,8 +36,20 @@
     right: 27rem;
   }
 
-  .benefits__items { 
+  .benefits__items {
     padding-bottom: 3rem;
+  }
+
+  .requirements__items {
+    column-gap: 2rem;
+  }
+
+  .requirements__item {
+    padding: 1rem 2rem;
+  }
+
+  .requirements__item-text {
+    font-size: 1rem;
   }
 }
 
@@ -126,6 +137,11 @@
 
   .calculator__item {
     max-width: initial;
+  }
+
+  .requirements__items {
+    grid-template-columns: 1fr;
+    gap: 1rem
   }
 }
 
