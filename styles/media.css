@@ -95,6 +95,14 @@
   .benefits__items {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .calculator__items {
+    flex-direction: column;
+  }
+
+  .calculator__item{
+    max-width: initial;
+  } 
 }
 
 @media (max-width: 509px) {
