@@ -22,6 +22,10 @@
   height: 100%;
 }
 
+.button-main{
+  margin-bottom: 1.875rem;
+}
+
 .form__button {
   padding: .875rem 2.19rem .875rem 2.19rem;
 }

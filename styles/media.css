@@ -1,3 +1,10 @@
+@media(max-width:1200px) {
+  .benefits__items {
+    column-gap: 2rem;
+    padding-bottom: 6.25rem;
+  }
+}
+
 @media (max-width: 1050px) {
   .banner__img--ellipse {
     right: -14rem;
@@ -28,6 +35,10 @@
 
   .banner__persona-inform {
     right: 27rem;
+  }
+
+  .benefits__items { 
+    padding-bottom: 3rem;
   }
 }
 
@@ -63,6 +74,19 @@
   .benefits__items {
     column-gap: 2rem;
   }
+
+  .calculator {
+    padding-bottom: 3rem;
+  }
+
+  .differences {
+    background-size: 100%;
+  }
+
+  .benefits__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
 }
 
 @media (max-width: 576px) {
@@ -100,9 +124,9 @@
     flex-direction: column;
   }
 
-  .calculator__item{
+  .calculator__item {
     max-width: initial;
-  } 
+  }
 }
 
 @media (max-width: 509px) {
@@ -133,11 +157,11 @@
     grid-template-columns: 1fr;
     column-gap: 6rem;
     padding-bottom: 6.25rem;
-}
+  }
 }
 
 @media(max-width:320px) {
-  .benefits__title{
+  .benefits__title {
     padding-top: 2rem;
   }
 }

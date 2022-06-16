@@ -102,10 +102,6 @@
   margin-bottom: 9.3rem;
 }
 
-.banner--button {
-  margin-bottom: 1.875rem;
-}
-
 .banner__persona-inform {
   position: relative;
   display: flex;
@@ -282,10 +278,6 @@
   max-width: 27rem;
 }
 
-.differences-bunner {
-  margin-bottom: 1.875rem;
-}
-
 .differences-license {
   padding-bottom: 6.25rem;
 }
@@ -422,8 +414,7 @@ select.form__item>option {
 
 .form__item-agreement>input {
   margin-left: 0;
-  ;
-}
+  }
 
 .form__button {
   align-self: flex-start;
