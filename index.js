@@ -130,7 +130,7 @@ rangeOne.addEventListener("input", e => {
   rangeOneValue = e.target.value;
   rangeLabelOne.innerHTML = valueOne.replace(/\B(?=(\d{3})+(?!\d))/g, " ");
   const result = countResult(valueOne, rangeTwoValue);
-  resultFinish.innerHTML =  result;
+  resultFinish.innerHTML = result;
 });
 
 rangeTwo.addEventListener("input", e => {
@@ -138,21 +138,54 @@ rangeTwo.addEventListener("input", e => {
   rangeTwoValue = e.target.value;
   rangeLabelTwo.innerHTML = valueTwo;
   const result = countResult(rangeOneValue, valueTwo);
-  resultFinish.innerHTML =  result;
+  resultFinish.innerHTML = result;
 });
 
 
 const countResult = (a, b) => {
   return ((Number(a) / Number(b)).toFixed(2)).replace(/\B(?=(\d{3})+(?!\d))/g, " "); // округляет до двух знаков и ставит пробелы между тысячами
 
-// округление до двух знаков
+  // округление до двух знаков
   //return  (Math.round((Number(a) / Number(b)) * 100)) / 100;
 
   //округление до двух знаков и ставит пробелы между числами
   // let finish = Number(a) / Number(b);
   // return (finish.toFixed(2) + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
-  
+
 }
+
+//!burger
+const burgerButton = document.querySelector('[data--burger-button]');
+const burgerMenu = document.querySelector('[data--burger-menu]');
+const burgerMenuWrap = document.querySelector('[ data--burger-menu-wrap]')
+//console.log(burgerButton, burger)
+
+const toggleBurgerMenu = () => {
+  burgerMenu.classList.toggle('active');
+  console.log('click')
+}
+
+const closedBurgerMenu = e => {
+  const target = e.target
+  if (!target.closest('[data--burger-menu]') && !target.closest('[data--burger-button]')) {
+    burgerMenu.classList.remove('active');
+  }
+}
+
+const clickElementForClosedBurgerMenu = (el) => {
+  for (let i = 0; i < el.length; i++) {
+    el[i].addEventListener('click', () => {
+      burgerMenu.classList.remove('active');
+      console.log('click')
+    })
+  }
+}
+
+burgerButton.addEventListener('click', toggleBurgerMenu);
+burgerMenuWrap.addEventListener('click', closedBurgerMenu);
+clickElementForClosedBurgerMenu(navLink);
+
+
 
 
 

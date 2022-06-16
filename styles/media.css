@@ -13,6 +13,12 @@
 }
 
 @media (max-width: 992px) {
+
+  .header__menu,
+  .header__link--tel{
+    display: none;
+  }
+
   .header__menu-list {
     font-size: 1rem;
   }
@@ -154,6 +160,15 @@
     grid-template-columns: 1fr;
     gap: 1rem
   }
+
+  .footer-wrap {
+    padding-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .footer__contacts-content {
+    column-gap: 1.5rem;
+  }
 }
 
 @media (max-width: 509px) {
@@ -166,6 +181,12 @@
   .banner__persona-inform {
     right: 17rem;
   }
+
+  .banner__img--ellipse {
+    right: -15rem;
+    bottom: -16rem;
+    width: 100%;
+}
 
   .application__wrap {
     grid-template-columns: 1fr 80%;
@@ -180,6 +201,29 @@
 
   .application__img--bg {
     width: 175%;
+  }
+
+  .footer-wrap {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .footer__contacts-title {
+    text-align: center;
+  }
+
+  .footer__contacts-content {
+    column-gap: 4rem;
+  }
+
+  .footer__agreement-link,
+  .copyright {   
+    max-width: initial;
+  }
+
+  .footer__logo{
+    align-self: center;
   }
 }
 
@@ -205,4 +249,8 @@
   .benefits__title {
     padding-top: 2rem;
   }
+
+  .footer__contacts-content {
+    column-gap: 2rem;
+}
 }

@@ -6,7 +6,7 @@
   left: 0;
   display: none;
   place-content: center;
-  z-index: 10;
+  z-index: 20;
   overflow: hidden;
 }
 
@@ -24,10 +24,9 @@
   background: rgba(85, 85, 85, 0.5);
 }
 
-.modal {
-  max-width: 34rem;
+.modal { 
   width: 100%;
-  z-index: 11;
+  z-index: 20;
   position: relative;
   border-radius: 1rem;
   overflow: hidden;

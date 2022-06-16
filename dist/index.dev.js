@@ -160,4 +160,35 @@ var countResult = function countResult(a, b) {
   //округление до двух знаков и ставит пробелы между числами
   // let finish = Number(a) / Number(b);
   // return (finish.toFixed(2) + "").split("").reverse().join("").replace(/(\d{3})/g, "$1 ").split("").reverse().join("").replace(/^ /, "");
+}; //!burger
+
+
+var burgerButton = document.querySelector('[data--burger-button]');
+var burgerMenu = document.querySelector('[data--burger-menu]');
+var burgerMenuWrap = document.querySelector('[ data--burger-menu-wrap]'); //console.log(burgerButton, burger)
+
+var toggleBurgerMenu = function toggleBurgerMenu() {
+  burgerMenu.classList.toggle('active');
+  console.log('click');
 };
+
+var closedBurgerMenu = function closedBurgerMenu(e) {
+  var target = e.target;
+
+  if (!target.closest('[data--burger-menu]') && !target.closest('[data--burger-button]')) {
+    burgerMenu.classList.remove('active');
+  }
+};
+
+var clickElementForClosedBurgerMenu = function clickElementForClosedBurgerMenu(el) {
+  for (var _i2 = 0; _i2 < el.length; _i2++) {
+    el[_i2].addEventListener('click', function () {
+      burgerMenu.classList.remove('active');
+      console.log('click');
+    });
+  }
+};
+
+burgerButton.addEventListener('click', toggleBurgerMenu);
+burgerMenuWrap.addEventListener('click', closedBurgerMenu);
+clickElementForClosedBurgerMenu(navLink);
