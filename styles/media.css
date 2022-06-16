@@ -98,6 +98,17 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .application__wrap {
+    grid-template-columns: 1fr 60%;
+  }
+
+  .application__img--bg {
+    width: 140%;
+  }
+
+  .application__img--ellipse {
+    width: 380%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -151,10 +162,24 @@
   }
 }
 
-
 @media (max-width: 480px) {
   .banner__persona-inform {
     right: 17rem;
+  }
+
+  .application__wrap {
+    grid-template-columns: 1fr 80%;
+    column-gap: 0;
+  }
+
+  .application__img--ellipse {
+    right: -4rem;
+    bottom: -11rem;
+    opacity: .5;
+  }
+
+  .application__img--bg {
+    width: 175%;
   }
 }
 
