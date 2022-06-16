@@ -112,6 +112,12 @@ span {
   }
 }
 
+@media (max-width: 320px){
+  .section__title{
+    padding-top: 2rem;
+  }
+}
+
 @media (max-width: 280px){
   :root{
     font-size: .65rem;
