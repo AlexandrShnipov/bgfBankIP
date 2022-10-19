@@ -162,13 +162,15 @@ const burgerMenuWrap = document.querySelector('[ data--burger-menu-wrap]')
 
 const toggleBurgerMenu = () => {
   burgerMenu.classList.toggle('active');
-  console.log('click')
+  burgerMenuWrap.classList.toggle('active');
+  //console.log('click')
 }
 
 const closedBurgerMenu = e => {
   const target = e.target
   if (!target.closest('[data--burger-menu]') && !target.closest('[data--burger-button]')) {
     burgerMenu.classList.remove('active');
+    burgerMenuWrap.classList.remove('active');
   }
 }
 
@@ -176,7 +178,8 @@ const clickElementForClosedBurgerMenu = (el) => {
   for (let i = 0; i < el.length; i++) {
     el[i].addEventListener('click', () => {
       burgerMenu.classList.remove('active');
-      console.log('click')
+      burgerMenuWrap.classList.remove('active');
+      //console.log('click')
     })
   }
 }

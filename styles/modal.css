@@ -8,6 +8,7 @@
   place-content: center;
   z-index: 20;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .no-scroll {

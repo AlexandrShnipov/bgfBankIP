@@ -1,3 +1,11 @@
+@media (min-width: 992px) {
+  .burger-menu__wrap,
+  .burger-menu,
+  .button--burger {
+    display: none;
+  }
+}
+
 @media(max-width:1200px) {
   .benefits__items {
     column-gap: 2rem;
